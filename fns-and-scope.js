@@ -6,6 +6,14 @@ var name = 'Tyler';
 //If the argument you passed in is equal to 'Tyler', return true. If it's not, return false.
 
   //Code Here
+  function isTyler(name){
+  	if ((name) === 'Tyler'){
+  		return true;
+  	} else {
+  		return false;
+  	}
+  }
+  isTyler('Tyler');
 
 
 //Next problem
@@ -16,6 +24,11 @@ var name = 'Tyler';
 
 
   //Code Here
+  function getName(){
+  	var name = prompt('What is your name?');
+  	return name;
+  }
+  getName();
 
 
 //Next Problem
@@ -26,6 +39,11 @@ var name = 'Tyler';
 //then alerts "Welcome, " plus whatever the users name is.
 
   //Code Here
+  function welcome(){
+  	var theName = getName();
+  	alert("Welcome, "+theName);
+  }
+  welcome();
 
 
 //Next problem
@@ -36,6 +54,8 @@ var name = 'Tyler';
 //What is the difference between arguments and parameters?
 
   //Answer Here
+  "Parameters are declared in the function statment and are variables to hold data that is passed to the function via arguments."
+  "Arguments are included in a function calling code in order to pass data into parameters of the function."
 
 
 //Next problem
@@ -46,6 +66,13 @@ var name = 'Tyler';
 
 
   //Answer Here
+  "The falsy values in JavaScript are the integer '0', the boolean 'false', and the keywords 'null', 'undefined', and 'NaN' or 'not a number', as well as '', which is an empty string."
+  "You can check to see if a value is falsy using an if statement:"
+  if(0){
+  	return false;
+  } else {
+  	return true;
+  }
 
 
 
@@ -56,12 +83,17 @@ var name = 'Tyler';
 //Create a function called myName that returns your name
 
   //Code Here
+  function myName() {
+  	return 'Luke Jensen';
+  }
 
 //Now save the function definition of myName into a new variable called newMyName
 
   //Code Here
+  var newMyName = myName;
 
 //Now alert the result of invoking newMyName
+alert(newMyName());
 
 
 
