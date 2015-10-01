@@ -10,10 +10,12 @@ var outer = function(){
 //Invoke outer saving the return value into another variable called 'inner'.
 
   //Code Here
+  var inner = outer();
 
 //Once you do that, invoke inner.
 
   //Code Here
+  inner();
 
 
 
@@ -33,7 +35,8 @@ var callFriend = function(){
 //Do what you need to do in order to call your function and get 'Calling Jake at 435-215-9248' in your console.
 
   //Code Here
-
+  var outerFunction = callFriend();
+  outerFunction("435-215-9248");
 
 
 //Next Problem
@@ -44,12 +47,31 @@ var callFriend = function(){
   Write a function called makeCounter that makes the following code work properly.
 */
 
+  var x = 0;
+
+  function counter() {
+    x++;
+    console.log(x);
+  }
+
+  counter();
+  counter();
+  counter();
+
   //Code Here
+  function makeCounter() {
+    var i = 0;
+    return function(){
+      i++;
+      return i;
+    } 
+  }
+
   var count = makeCounter();
-  count() // 1
-  count() // 2
-  count() // 3
-  count() // 4
+  count(); // 1
+  count(); // 2
+  count(); // 3
+  count(); // 4
 
 
 
