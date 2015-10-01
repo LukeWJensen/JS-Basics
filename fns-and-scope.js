@@ -104,9 +104,16 @@ alert(newMyName());
 //Create a function called outerFn which returns an anonymous function which returns your name.
 
   //Code Here
+  function outerFn() {
+  	return function() {
+  		return 'Luke Jensen';
+  	}
+  }
 
 //Now save the result of invoking outerFn into a variable called innerFn.
 
   //Code Here
+  var innerFn = outerFn();
 
 //Now invoke innerFn.
+innerFn();
